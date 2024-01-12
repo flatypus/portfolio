@@ -317,7 +317,7 @@ export default function Resume(): JSX.Element {
   // uncomment for printing
   // return <Content />;
   return (
-    <div className="grid h-full min-h-screen w-full place-items-center bg-white text-black">
+    <div className="relative grid h-full min-h-screen w-full place-items-center bg-white text-left text-black">
       <div className="opacity-40">
         <Blobs />
       </div>

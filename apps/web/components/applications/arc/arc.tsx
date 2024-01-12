@@ -9,6 +9,7 @@ import Pinned from "./pinned";
 import { MinimizedSidebar, Sidebar } from "./sidebar";
 import Slider from "./slider";
 import SideTabs from "./sidetabs";
+import Resume from "../../../app/resume/page";
 
 const innerElems = (
   selectedTab: number,
@@ -53,6 +54,13 @@ export default function Arc(): JSX.Element {
       url: "https://flatypus.me",
       icon: "/images/flatypus.png",
       key: new Date().getTime().toString(),
+    },
+    {
+      name: "Resume",
+      element: Resume,
+      url: "https://flatypus.me/resume",
+      icon: "/images/flatypus.png",
+      key: `${new Date().getTime().toString()}1`,
     },
   ]);
 
