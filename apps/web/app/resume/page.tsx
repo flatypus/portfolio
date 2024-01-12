@@ -89,7 +89,7 @@ const extracurriculars = [
     ],
   },
   {
-    title: "Co-president of Math Club",
+    title: "Executive of Math Club",
     description: [
       "Achieved 1st place provincially and regionally for three consecutive years at the Canadian Math Challengers Society",
     ],
