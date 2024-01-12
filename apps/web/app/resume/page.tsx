@@ -292,7 +292,7 @@ function Skills(): JSX.Element {
   );
 }
 
-export function Content(): JSX.Element {
+function Content(): JSX.Element {
   return (
     <>
       <div className="grid w-full grid-cols-4">
