@@ -1,6 +1,7 @@
 {
   "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
+    "jsx": "react-jsx",
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -16,7 +17,7 @@
       "@public/*": ["./public/*"],
       "@shared/*": ["./shared/*"],
       "@stores/*": ["./stores/*"],
-      "@styles/*": ["./styles/*"],
+      "@styles/*": ["./styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
