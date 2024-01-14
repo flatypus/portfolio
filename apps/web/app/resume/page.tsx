@@ -8,7 +8,7 @@ const contact = {
   email: "yhc3141@gmail.com",
   site: "https://flatypus.me",
   image: "/images/hinson.jpg",
-  tag: "Software Developer with a knack for perfection, building tomorrow's solutions today.",
+  tag: "Software developer with a knack for perfection, building tomorrow's solutions today.",
 };
 
 function Contact(): JSX.Element {
@@ -25,7 +25,7 @@ function Contact(): JSX.Element {
 function Title(): JSX.Element {
   return (
     <div className="col-span-2">
-      <h1 className="text-resume-purple mb-2 text-5xl font-bold">
+      <h1 className="mb-2 text-5xl font-bold text-resume-purple">
         {contact.name}
       </h1>
       <p className="text-xs">{contact.tag}</p>
@@ -37,12 +37,12 @@ const experience = [
   {
     title: "Founding Software Engineer",
     company: "EduBeyond Education Inc.",
-    date: "May 2022 - Present",
+    date: "July 2023 - Present",
     description: [
-      "Directed a UN-accredited edtech startup dev team with a $5M valuation",
-      "Created an AI-driven learning platform and successfully deployed it to over $1B+ companies and 50K+ students across the globe",
-      "Conducted product feedback interviews with teachers from Canada to Singapore",
-      "Helped establish the Japan wing of the startup and taught courses in Jakarta in association with an Indonesian charity",
+      "Conducting B2B sales and deploying globally to No.1 Taiwan-based IT services provider, Southeast Asia’s largest pharmaceutical company, Indonesia's largest telecommunications company, and international private school chains.",
+      "Working with Canada's leading education research facility, InnovED @U of Toronto",
+      "Helped establish Japan branch teaching 150+ students",
+      "Taught in Jakarta alongside Indonesian charity, Tengan Pengharapan",
     ],
   },
   {
@@ -53,6 +53,17 @@ const experience = [
       "Lead the research initiative in Natural Language Processing, creating personalized language models to enhance education",
       "Collaborated with researchers at Berkeley AI Research Lab",
       "Presented findings in University of Michigan AI Symposium",
+    ],
+  },
+  {
+    title: "Full-Stack Software Engineer",
+    company: "EduBeyond Education Inc.",
+    date: "May 2022 - July 2023",
+    description: [
+      "Directed professional development team at UN accredited high impact ed-tech startup to build AI-driven learning platform.",
+      "Built EduBeyond's frontend Nextjs site, designed real-time websocket messaging architecture and backend Express api.",
+      "Interviewed teachers from Canada to Singapore to develop better curriculum",
+      "Contributed to winning 1st at Moonshot awards, finalist for Samsung's Solve for Tomorrow Canada, and semifinalist for MIT Solve[ED].",
     ],
   },
 ];
@@ -111,7 +122,7 @@ const extracurriculars = [
 function Experience(): JSX.Element {
   return (
     <div className="mt-6 text-xs">
-      <div className="text-resume-purple mb-2 text-xl font-bold">
+      <div className="mb-2 text-xl font-bold text-resume-purple">
         Experience
       </div>
       <div className="flex flex-col gap-y-6">
@@ -159,7 +170,7 @@ function Extracurriculars(): JSX.Element {
 
   return (
     <div className="mt-6 text-xs">
-      <div className="text-resume-purple mb-2 text-xl font-bold">
+      <div className="mb-2 text-xl font-bold text-resume-purple">
         Extracurriculars
       </div>
       <div className="grid grid-cols-2 gap-6">
@@ -190,8 +201,7 @@ const awards = [
   {
     title: "Crescendo International Music Competition 2020-21, 1st Place",
     description: [
-      "Selected as a winner from 5,000+ global applicants",
-      "Dedication towards practicing 2 pieces for 3 months; scored 29/30",
+      "Selected as a winner from 5,000+ global applicants; scored 29/30",
     ],
   },
 ];
@@ -199,7 +209,7 @@ const awards = [
 function Awards(): JSX.Element {
   return (
     <div className="mt-6 text-xs">
-      <div className="text-resume-purple mb-2 text-xl font-bold">Awards</div>
+      <div className="mb-2 text-xl font-bold text-resume-purple">Awards</div>
       <div className="flex flex-col gap-6">
         {awards.map((item) => (
           <div key={item.title}>
@@ -232,7 +242,7 @@ const volunteer = [
 function Volunteer(): JSX.Element {
   return (
     <div className="mt-6 text-xs">
-      <div className="text-resume-purple mb-2 text-xl font-bold">Volunteer</div>
+      <div className="mb-2 text-xl font-bold text-resume-purple">Volunteer</div>
       <div className="flex flex-col gap-6">
         {volunteer.map((item) => (
           <div key={item.title}>
@@ -277,7 +287,7 @@ const skills = {
 function Skills(): JSX.Element {
   return (
     <div className="mt-6 text-xs">
-      <div className="text-resume-purple mb-2 text-xl font-bold">Skills</div>
+      <div className="mb-2 text-xl font-bold text-resume-purple">Skills</div>
       <div className="flex flex-col gap-6">
         {Object.entries(skills).map(([title, items]) => (
           <div key={title}>
