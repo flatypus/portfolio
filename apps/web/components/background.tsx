@@ -45,7 +45,7 @@ export default function Background({ children }: BackgroundProps): JSX.Element {
       <div
         style={
           {
-            // backgroundImage: "url(https://pixel.flatypus.me/flatypus.me)",
+            backgroundImage: "url(https://pixel.flatypus.me/flatypus.me)",
           }
         }
       />
