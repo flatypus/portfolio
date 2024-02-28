@@ -3,13 +3,13 @@ import { WindowContext } from "@stores/window.context";
 import type { Tab } from "@lib/types";
 import Playing from "@components/widgets/ytmusic";
 import Welcome from "../welcome/welcome";
+import Resume from "../../../app/resume/page";
 import GrainyGradient from "./grainy-gradient";
 import Input from "./input";
 import Pinned from "./pinned";
 import { MinimizedSidebar, Sidebar } from "./sidebar";
 import Slider from "./slider";
 import SideTabs from "./sidetabs";
-import Resume from "../../../app/resume/page";
 
 const innerElems = (
   selectedTab: number,
@@ -56,7 +56,7 @@ export default function Arc(): JSX.Element {
       key: new Date().getTime().toString(),
     },
     {
-      name: "Resume",
+      name: "My Resume!",
       element: Resume,
       url: "https://flatypus.me/resume",
       icon: "/images/flatypus.png",

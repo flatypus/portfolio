@@ -8,7 +8,7 @@ const contact = {
   email: "yhc3141@gmail.com",
   site: "https://flatypus.me",
   image: "/images/hinson.jpg",
-  tag: "Software developer with a knack for perfection, building tomorrow's solutions today.",
+  tag: "Software developer building tomorrow's solutions today.",
 };
 
 function Contact(): JSX.Element {
