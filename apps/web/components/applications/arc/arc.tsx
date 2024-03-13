@@ -1,8 +1,8 @@
 import { useContext, useEffect, useMemo, useRef, useState } from "react";
+import { Resume } from "@components/applications/resume/resume";
 import { WindowContext } from "@stores/window.context";
 import Playing from "@components/widgets/ytmusic";
 import type { Tab } from "@lib/types";
-import { Resume } from "../../../app/resume/page";
 import Welcome from "../welcome/welcome";
 import { MinimizedSidebar, Sidebar } from "./sidebar";
 import GrainyGradient from "./grainy-gradient";
