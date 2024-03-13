@@ -35,7 +35,7 @@ export default function Content({
       height: number;
     } => ({
       width: window.innerWidth,
-      height: window.innerHeight - 64,
+      height: window.innerHeight,
     });
 
     setGetWindowSize(getWindowSize);
