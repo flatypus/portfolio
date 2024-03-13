@@ -323,21 +323,29 @@ function Content(): JSX.Element {
   );
 }
 
-export default function Resume(): JSX.Element {
+export function Resume(): JSX.Element {
   // uncomment for printing
   // return <Content />;
   return (
-    <div className="relative grid h-full min-h-screen w-full place-items-center bg-white text-left text-black">
+    <div className="h-full bg-white text-left text-black">
       <div className="opacity-40">
         <Blobs />
       </div>
       <div className="absolute z-[100] flex h-full w-full flex-row">
         <div className="h-full flex-1 bg-black opacity-10" />
-        <div className="h-screen w-full max-w-[1000px] shrink-0 overflow-y-scroll p-20 shadow-lg">
+        <div className="h-full w-full max-w-[1000px] shrink-0 overflow-y-scroll p-20 shadow-lg">
           <Content />
         </div>
         <div className="h-full flex-1 bg-black opacity-10" />
       </div>
+    </div>
+  );
+}
+
+export default function Site(): JSX.Element {
+  return (
+    <div className="h-full min-h-screen w-full">
+      <Resume />
     </div>
   );
 }

@@ -1,15 +1,15 @@
 import { useContext, useEffect, useMemo, useRef, useState } from "react";
 import { WindowContext } from "@stores/window.context";
-import type { Tab } from "@lib/types";
 import Playing from "@components/widgets/ytmusic";
+import type { Tab } from "@lib/types";
+import { Resume } from "../../../app/resume/page";
 import Welcome from "../welcome/welcome";
-import Resume from "../../../app/resume/page";
+import { MinimizedSidebar, Sidebar } from "./sidebar";
 import GrainyGradient from "./grainy-gradient";
 import Input from "./input";
 import Pinned from "./pinned";
-import { MinimizedSidebar, Sidebar } from "./sidebar";
-import Slider from "./slider";
 import SideTabs from "./sidetabs";
+import Slider from "./slider";
 
 const innerElems = (
   selectedTab: number,

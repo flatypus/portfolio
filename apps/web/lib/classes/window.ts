@@ -31,6 +31,7 @@ export class Window {
   x = 0;
   y = 0;
   docked: boolean;
+  frames: number;
 
   private defaultTime = 50;
   private getWindows: () => Window[];
@@ -60,6 +61,7 @@ export class Window {
     this.component = component;
     this.refreshWindows = refreshWindows;
     this.docked = docked;
+    this.frames = 24;
     this.getWindows = () => {
       const allWindows = getWindows();
       return allWindows.filter((window) => window.name !== this.name);
@@ -80,8 +82,6 @@ export class Window {
     width?: number;
     height?: number;
   }): void {
-    const frames = 24;
-
     const start = {
       x: this.x,
       y: this.y,
@@ -99,8 +99,8 @@ export class Window {
     const values: { x: number; y: number; width: number; height: number }[] =
       [];
 
-    for (let frame = 0; frame < frames; frame++) {
-      const ease = (-Math.cos(Math.PI * (frame / frames)) + 1) / 2;
+    for (let frame = 0; frame < this.frames; frame++) {
+      const ease = (-Math.cos(Math.PI * (frame / this.frames)) + 1) / 2;
       values.push({
         x: start.x + (requiredTarget.x - start.x) * ease,
         y: start.y + (requiredTarget.y - start.y) * ease,
@@ -119,7 +119,7 @@ export class Window {
       frame += 1;
       this.refreshWindows();
 
-      if (frame < frames) {
+      if (frame < this.frames) {
         requestAnimationFrame(animateFrame);
       }
     };
@@ -229,6 +229,7 @@ export class Window {
   }
 
   fullscreen(): void {
+    this.frames = this.mode === "windowed" ? 12 : 24;
     this.setMode("fullscreen");
     this.setActiveWindow();
     const { width: innerWidth, height: innerHeight } = this.getWindowSize();
@@ -236,6 +237,7 @@ export class Window {
   }
 
   minimize(): void {
+    this.frames = 24;
     this.hide();
     this.focusAnotherWindow();
     setTimeout(() => {
@@ -252,6 +254,7 @@ export class Window {
   }
 
   window(): void {
+    this.frames = 12;
     this.setMode("windowed");
     this.setActiveWindow();
     this.randomWindowTransform();
