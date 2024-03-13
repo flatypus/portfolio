@@ -38,6 +38,7 @@ const experience = [
     title: "Founding Software Engineer",
     company: "EduBeyond Education Inc.",
     date: "July 2023 - Present",
+    link: "https://edubeyond.ai",
     description: [
       "Conducting B2B sales and deploying globally to No.1 Taiwan-based IT services provider, Southeast Asia’s largest pharmaceutical company, Indonesia's largest telecommunications company, and international private school chains.",
       "Working with Canada's leading education research facility, InnovED @U of Toronto",
@@ -49,6 +50,7 @@ const experience = [
     title: "AI Research Team Lead",
     company: "EduBeyond Education Inc.",
     date: "July 2023 - Present",
+    link: "https://edubeyond.ai",
     description: [
       "Lead the research initiative in Natural Language Processing, creating personalized language models to enhance education",
       "Collaborated with researchers at Berkeley AI Research Lab",
@@ -59,6 +61,7 @@ const experience = [
     title: "Full-Stack Software Engineer",
     company: "EduBeyond Education Inc.",
     date: "May 2022 - July 2023",
+    link: "https://edubeyond.ai",
     description: [
       "Directed professional development team at UN accredited high impact ed-tech startup to build AI-driven learning platform.",
       "Built EduBeyond's frontend Nextjs site, designed real-time websocket messaging architecture and backend Express api.",
@@ -72,7 +75,7 @@ const extracurriculars = [
   {
     title: "YouTube Filmmaker and Education Communicator",
     description: [
-      "Garnered over 120,000 views and 1,200 subscribers illuminating on homemade engineering projects and educational videos",
+      "Garnered over 150,000 views and 1,500 subscribers illuminating on homemade engineering projects and educational videos",
       "Conducted extensive research on ‘Land Checkerboarding’; presented findings via self-produced documentary",
     ],
   },
@@ -128,13 +131,17 @@ function Experience(): JSX.Element {
       <div className="flex flex-col gap-y-6">
         {experience.map((item) => (
           <div key={item.title}>
-            <div className="mb-2 flex flex-row justify-between">
+            <Link
+              className="mb-2 flex flex-row justify-between"
+              href={item.link}
+              target="_blank"
+            >
               <div>
                 <div className="font-bold">{item.title}</div>
                 <div className="font-semibold">{item.company}</div>
               </div>
               <div className="font-bold">{item.date}</div>
-            </div>
+            </Link>
             {item.description.map((desc) => (
               <div className="ml-2 mt-1" key={desc}>
                 - {desc}
@@ -183,16 +190,55 @@ function Extracurriculars(): JSX.Element {
   );
 }
 
+const publications = [
+  {
+    title: "Multimodal Retrieval Augmented Generation Evaluation Benchmark",
+    date: "Mar 11, 2024",
+    publisher:
+      "IEEE Vehicular Technology Society - 99th Vehicular Technology Conference 2024",
+    description:
+      "Created a multimodal evaluation platform for assessing the performance of Retrieval Augmented Generation (RAG) systems used in Large Language Models.",
+    link: "https://drive.google.com/file/d/1O0b3Ey9JenLECOfOSXBiD8maGSvG-oFE/view?usp=sharing",
+  },
+];
+
+function Publications(): JSX.Element {
+  return (
+    <div className="mt-6 text-xs">
+      <div className="mb-2 text-xl font-bold text-resume-purple">
+        Publications
+      </div>
+      <div className="flex flex-col gap-6">
+        {publications.map((item) => (
+          <div key={item.title}>
+            <div className="mb-1">
+              <Link className="font-bold" href={item.link} target="_blank">
+                {item.title}
+              </Link>
+              <div className="text-[10px] font-light">
+                {item.date} · {item.publisher}
+              </div>
+            </div>
+            <div className="mt-1">{item.description}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 const awards = [
   {
     title: "Rise For The World, Global Finalist",
+    link: "https://eu.credential.net/09f3e14f-26e8-408e-8cc9-581dfe473117#gs.5tnfe5",
     description: [
       "Recognized as 1 in 500 of the world’s brightest teenagers from 170+ countries by Schmidt Futures and the Rhodes Trust",
-      "Competed against 80,000+ students in the 100-day Rise competition, dedicated over 300 hours to project detailing",
+      "Competed against 80,000+ students in the 100-day Rise competition, dedicated over 300 hours to project development",
     ],
   },
   {
     title: "Canadian Computing Competition, Junior Division Honour Roll",
+    link: "https://www.cemc.uwaterloo.ca/contests/past_contests/2022/2022CCCResults.pdf",
     description: [
       "Placed 22th/4000 globally (top 0.5%)",
       "Prepared extensively using past contest problems, conducted biweekly training sessions online for school club members",
@@ -200,6 +246,7 @@ const awards = [
   },
   {
     title: "Crescendo International Music Competition 2020-21, 1st Place",
+    link: "https://drive.google.com/file/d/1hQwXhnZvks5wY1Z0V6WvNisAenflW4U2/view?usp=sharing",
     description: [
       "Selected as a winner from 5,000+ global applicants; scored 29/30",
     ],
@@ -213,9 +260,9 @@ function Awards(): JSX.Element {
       <div className="flex flex-col gap-6">
         {awards.map((item) => (
           <div key={item.title}>
-            <div className="mb-1">
+            <Link className="mb-1" href={item.link} target="_blank">
               <div className="font-bold">{item.title}</div>
-            </div>
+            </Link>
             {item.description.map((desc) => (
               <div className="ml-2 mt-1" key={desc}>
                 - {desc}
@@ -314,6 +361,7 @@ function Content(): JSX.Element {
       <Extracurriculars />
       <div className="grid grid-cols-4 gap-6">
         <div className="col-span-3">
+          <Publications />
           <Awards />
           <Volunteer />
         </div>
