@@ -1,5 +1,6 @@
 import Arc from "@components/applications/arc/arc";
 import Iterm from "@components/applications/iterm/iterm";
+import TagIron from "@components/applications/tagiron/tagiron";
 // import MarkdownPage from "@components/applications/markdown-page/markdown-page";
 
 export const apps = [
@@ -36,5 +37,10 @@ export const apps = [
     name: "Notion",
     icon: "notion.png",
     // component: <MarkdownPage path="/markdown/InProgress.md" />,
+  },
+  {
+    name: "Tagiron",
+    icon: "tagiron.png",
+    component: <TagIron />,
   },
 ];

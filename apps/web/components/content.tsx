@@ -20,14 +20,24 @@ export default function Content({
   }, [setIsTouchDevice]);
 
   useEffect(() => {
-    let file = fileStructure.traverse(["hinson", "Applications", "Arc"]);
+    let file;
+
     if (path && path.length > 0) {
-      const possibleFile = fileStructure.traverse(path);
-      if (possibleFile && possibleFile instanceof File) {
-        file = possibleFile;
-      } else {
-        return;
+      const checkPaths = (_path: string[]): boolean => {
+        const possibleFile = fileStructure.traverse(_path);
+        return Boolean(possibleFile && possibleFile instanceof File);
+      };
+
+      for (const checkPath of [path, ["hinson", "Applications", ...path]]) {
+        if (checkPaths(checkPath)) {
+          file = fileStructure.traverse(checkPath);
+          break;
+        }
       }
+
+      if (!file) return;
+    } else {
+      file = fileStructure.traverse(["hinson", "Applications", "Arc"]);
     }
 
     const getWindowSize = (): {

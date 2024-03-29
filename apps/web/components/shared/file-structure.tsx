@@ -11,6 +11,7 @@ import Arc from "@components/applications/arc/arc";
 // import CSSBattles from "@components/projects/cssbattles";
 import MarkdownPage from "@components/applications/markdown-page/markdown-page";
 import Welcome from "@components/applications/welcome/welcome";
+import TagIron from "@components/applications/tagiron/tagiron";
 
 export type Icon = FunctionComponent<IconProps>;
 
@@ -159,6 +160,11 @@ export const fileStructure = new Directory({
               name: "Notion",
               icon: "/icons/notion.png",
               // content: <MarkdownPage path="/markdown/InProgress.md" />,
+            }),
+            new File({
+              name: "Tagiron",
+              icon: "tagiron.png",
+              content: <TagIron />,
             }),
           ],
         }),
