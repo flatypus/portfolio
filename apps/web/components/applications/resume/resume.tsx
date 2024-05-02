@@ -33,6 +33,24 @@ function Title(): JSX.Element {
   );
 }
 
+const education = [
+  "Eric Hamber Secondary School (96% average in core subjects)",
+  "Accepted Stanford University, Bachelor of Computer Science, will graduate in 2028",
+];
+
+function Education(): JSX.Element {
+  return (
+    <div className="mt-6 text-xs">
+      <div className="mb-2 text-xl font-bold text-resume-purple">Education</div>
+      <div className="ml-2">
+        {education.map((item) => (
+          <div key={item}>- {item}</div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 const experience = [
   {
     title: "Founding Software Engineer",
@@ -40,8 +58,8 @@ const experience = [
     date: "July 2023 - Present",
     link: "https://edubeyond.ai",
     description: [
-      "Conducting B2B sales and deploying globally to No.1 Taiwan-based IT services provider, Southeast Asia’s largest pharmaceutical company, Indonesia's largest telecommunications company, and international private school chains.",
-      "Working with Canada's leading education research facility, InnovED @U of Toronto",
+      "Conducting B2B sales and deploying globally to No.1 Taiwan-based IT services provider, Southeast Asia's largest pharmaceutical company, Indonesia's largest telecommunications company, and international private school chains.",
+      "Working with Canada's leading education research facility, InnovED @University of Toronto",
       "Helped establish Japan branch teaching 150+ students",
       "Taught in Jakarta alongside Indonesian charity, Tengan Pengharapan",
     ],
@@ -52,9 +70,9 @@ const experience = [
     date: "July 2023 - Present",
     link: "https://edubeyond.ai",
     description: [
-      "Lead the research initiative in Natural Language Processing, creating personalized language models to enhance education",
-      "Collaborated with researchers at Berkeley AI Research Lab",
-      "Presented findings in University of Michigan AI Symposium",
+      "Lead the research initiative in Natural Language Processing; built popular chain-of-thought Python library widely used by over 7000 developers",
+      "Built adaptive language models with Retrieval Augmented Generation to enhance education",
+      "Collaborated with researchers at Berkeley AI Research Lab; presented findings at IEEE conference and University of Michigan AI Symposium",
     ],
   },
   {
@@ -310,7 +328,14 @@ function Volunteer(): JSX.Element {
 }
 
 const skills = {
-  Languages: ["Python", "TypeScript/JavaScript", "HTML/CSS", "Rust", "SQL"],
+  Languages: [
+    "Python",
+    "TypeScript/JavaScript",
+    "HTML/CSS",
+    "Rust",
+    "SQL",
+    "Golang",
+  ],
   Frameworks: [
     "React/Next.js",
     "TailwindCSS",
@@ -320,6 +345,7 @@ const skills = {
     "Fastapi",
     "PostgreSQL",
     "MongoDB",
+    "Websocket",
   ],
   Platforms: ["Git", "Github", "Railway", "Fly", "Vercel", "Docker", "Figma"],
   Social: [
@@ -357,6 +383,7 @@ function Content(): JSX.Element {
         <div />
         <Contact />
       </div>
+      <Education />
       <Experience />
       <Extracurriculars />
       <div className="grid grid-cols-4 gap-6">
