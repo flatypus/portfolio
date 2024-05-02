@@ -34,7 +34,7 @@ function Title(): JSX.Element {
 }
 
 const education = [
-  "Eric Hamber Secondary School (96% average in core subjects)",
+  "Eric Hamber Secondary School (96% average in core subjects), took 11 APs (10 5s), SAT of 1560, will graduate in 2024",
   "Accepted Stanford University, Bachelor of Computer Science, will graduate in 2028",
 ];
 
