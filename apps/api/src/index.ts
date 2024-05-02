@@ -1,12 +1,14 @@
-import { Elysia } from "elysia";
-import { logger } from "./lib/logger";
+import { HelloRouter } from "./routes/hello.router";
+import { register } from "@reflet/express";
+import express from "express";
+import expressWs from "express-ws";
+import { Tagiron } from "./routes/tagiron.socket";
 
-const app = new Elysia()
-  .get("/ip", ({ request }) => {
-    const ip = request.headers.get("x-forwarded-for");
-    if (ip) logger.info({ ip });
-    return { ip };
-  })
-  .listen(4000);
+const { app } = expressWs(express());
 
-console.log(`🦊 Elysia is running at port ${app.server?.port}!`);
+register(app, [HelloRouter]);
+
+app.ws("/tagiron", Tagiron);
+app.listen(4000);
+
+console.log(`Express with reflet is running at port 4000!`);
