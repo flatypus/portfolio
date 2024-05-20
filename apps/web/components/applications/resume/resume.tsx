@@ -93,30 +93,37 @@ const extracurriculars = [
   {
     title: "YouTube Filmmaker and Education Communicator",
     description: [
-      "Garnered over 150,000 views and 1,500 subscribers illuminating on homemade engineering projects and educational videos",
-      "Conducted extensive research on ‘Land Checkerboarding’; presented findings via self-produced documentary",
+      "Garnered over 150,000 views and 1,700 subscribers illuminating on homemade engineering projects and educational videos",
+      "Conducted extensive research on ‘Land Checkerboarding’; worked with US Bureau of Land Management and the Nature Conservancy; presented findings in self-produced documentary",
+    ],
+  },
+  {
+    title: "CSDCMS CanSat Design Competition - Team Canada",
+    description: [
+      "Designed 300g satellite with on-board computer to conduct scientific mission aboard rocket",
+      "Won 1st place against 18 teams at national CanSat competition",
+      "Representing Canada at 2024 European Space Agency International CanSat event",
     ],
   },
   {
     title: "Pianist",
     description: [
       "Achieved RCM 10 certificate & ARCT Harmony with honors after a classical training of 13 years",
-      "Independently orchestrated ‘Piano for Covid’ fundraiser, raising over $1,000",
-      "Studying Jazz piano, lead pianist for school jazz band.",
+      "Independently orchestrated ‘Piano for Covid’ fundraiser, $1,000+",
+      "Studying Jazz piano, lead pianist for school jazz band",
     ],
   },
   {
     title: "Co-president, UBC Physics Olympics team",
     description: [
       "Worked extensively to design working vacuum pump using only homemade parts",
-      "Led and mentored team to 9th place in annual Physics Olympics competition",
+      "Led and mentored team to 2nd place at annual 2024 Physics Olympics competition",
     ],
   },
   {
     title: "President of Programming Club",
     description: [
       "Expanded the club from a niche group of five to a community of 30+ members",
-      "Led programming club integration with Hack Club, a global network of high school coding clubs",
       "Organized weekly meetings discussing programming topics, studying common algorithms and strategies",
     ],
   },
@@ -127,15 +134,15 @@ const extracurriculars = [
     ],
   },
   {
-    title: "Badminton Athlete",
+    title: "Reach for the Top",
     description: [
-      "Competed in numerous state and high school tournaments, past 4th rank in junior provincial B doubles and contributed to consecutive wins for high school team",
+      "Won four consecutive provincial 1st place trivia titles and 4th in Canada-wide trivia competition",
     ],
   },
   {
-    title: "Club executive of Reach for the Top",
+    title: "Badminton Athlete",
     description: [
-      "Won four consecutive provincial 1st place trivia titles and 4th in Canada-wide trivia competition",
+      "Competed in numerous state and high school tournaments, past 4th rank in junior provincial B doubles and contributed to consecutive wins for high school team",
     ],
   },
 ];
@@ -333,6 +340,7 @@ const skills = {
     "TypeScript/JavaScript",
     "HTML/CSS",
     "Rust",
+    "C++",
     "SQL",
     "Golang",
   ],
