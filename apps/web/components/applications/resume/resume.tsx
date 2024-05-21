@@ -58,7 +58,7 @@ const experience = [
     date: "July 2023 - Present",
     link: "https://edubeyond.ai",
     description: [
-      "Conducting B2B sales and deploying globally to No.1 Taiwan-based IT services provider, Southeast Asia's largest pharmaceutical company, Indonesia's largest telecommunications company, and international private school chains.",
+      "Conducting B2B sales and deploying globally to No.1 Taiwan-based IT services provider, Southeast Asia's largest pharmaceutical company, one of Indonesia's largest telecommunications companies, and international private school chains.",
       "Working with Canada's leading education research facility, InnovED @University of Toronto",
       "Helped establish Japan branch teaching 150+ students",
       "Taught in Jakarta alongside Indonesian charity, Tengan Pengharapan",
