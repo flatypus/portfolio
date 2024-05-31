@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Blobs } from "@components/applications/welcome/blobs";
+import DownloadButton from "./download-button";
 
 const contact = {
   name: "Hinson Chan",
@@ -411,6 +412,7 @@ export function Resume(): JSX.Element {
   // return <Content />;
   return (
     <div className="h-full bg-white text-left text-black">
+      <DownloadButton />
       <div className="opacity-40">
         <Blobs />
       </div>
