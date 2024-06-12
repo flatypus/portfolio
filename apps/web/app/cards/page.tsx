@@ -1,9 +1,12 @@
 interface Challenge {
-  type: "curse" | "challenge" | "multi-challenge";
+  type: "cursed!" | "challenge" | "multi-challenge";
   title: string;
   description: string;
   coins: number;
 }
+
+const capitalize = (s: string): string =>
+  s.charAt(0).toUpperCase() + s.slice(1);
 
 const challenges: Challenge[] = [
   {
@@ -155,25 +158,25 @@ const challenges: Challenge[] = [
     coins: 100,
   },
   {
-    type: "curse",
+    type: "cursed!",
     title: "No Google Maps",
     description: "You may not use Google Maps for the rest of the run.",
     coins: 1000,
   },
   {
-    type: "curse",
+    type: "cursed!",
     title: "Random Next Train",
     description: "You must take the next train that arrives at a station.",
     coins: 1000,
   },
   {
-    type: "curse",
+    type: "cursed!",
     title: "Left Hand",
     description: "You can only use your left hand for the rest of the run",
     coins: 1000,
   },
   {
-    type: "curse",
+    type: "cursed!",
     title: "No E",
     description: "You may not use the letter E.",
     coins: 1000,
@@ -182,7 +185,7 @@ const challenges: Challenge[] = [
 
 const color = {
   challenge: "#2531d1",
-  curse: "rgb(107 33 168)",
+  "cursed!": "rgb(107 33 168)",
   "multi-challenge": "#ffe100",
 };
 
@@ -206,7 +209,10 @@ function Card({ challenge }: { challenge: Challenge }): JSX.Element {
         }}
       >
         <div className="flex flex-col gap-6">
-          <h2 className="text-3xl font-bold">{challenge.title}</h2>
+          <h2 className="text-3xl font-bold">
+            {capitalize(challenge.type)}
+            {challenge.type !== "cursed!" ? ":" : ""} {challenge.title}
+          </h2>
           <p className="text-base font-medium">{challenge.description}</p>
           <p className="text-xl font-semibold">
             This challenge is worth {challenge.coins}
